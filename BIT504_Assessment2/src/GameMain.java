@@ -129,7 +129,7 @@ public class GameMain extends JPanel implements MouseListener {
 			}
 		}
 		currentState = GameState.Playing;
-		currentPlayer = Player.Cross;
+		currentPlayer = Player.Nought;
 	}
 
 	/**
