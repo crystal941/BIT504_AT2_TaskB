@@ -11,7 +11,7 @@ public class GameMain extends JPanel implements MouseListener {
 
 	// constant for dimensions used for drawing
 	// cell width and height
-	public static final int CELL_SIZE = 100;
+	public static final int CELL_SIZE = 200;
 	// drawing canvas
 	public static final int CANVAS_WIDTH = CELL_SIZE * COLS;
 	public static final int CANVAS_HEIGHT = CELL_SIZE * ROWS;
@@ -89,13 +89,13 @@ public class GameMain extends JPanel implements MouseListener {
 	public void paintComponent(Graphics g) {
 		// fill background and set colour to white
 		super.paintComponent(g);
-		setBackground(Color.WHITE);
+		setBackground(Color.BLACK);
 		// ask the game board to paint itself
 		board.paint(g);
 
 		// set status bar message
 		if (currentState == GameState.Playing) {
-			statusBar.setForeground(Color.BLACK);
+			statusBar.setForeground(Color.WHITE);
 			if (currentPlayer == Player.Cross) {
 				// TODO: use the status bar to display the message "X"'s Turn
 				// ============================================================
@@ -129,7 +129,7 @@ public class GameMain extends JPanel implements MouseListener {
 			}
 		}
 		currentState = GameState.Playing;
-		currentPlayer = Player.Cross;
+		currentPlayer = Player.Nought;
 	}
 
 	/**
